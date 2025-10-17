@@ -19,15 +19,22 @@
 ### Imperial HPC Docs
 - **Tutorial:** [Getting Started Guide](https://icl-rcs-user-guide.readthedocs.io/en/latest/hpc/getting-started/)
 
+### Isambard-AI HPC
+- **Tutorial:** [Getting Started Guide](https://portal.isambard.ac.uk/profile/)
+
 ---
 
 ## ⚙️ Bash Configuration (`~/.bashrc`)
 
-> Keep all aliases and environment variables here.
-
 ```bash
-# Example setup
-alias ll='ls -lah --color=auto'
-alias cfiles='find . -type f | wc -l'
-export PATH=$PATH:/usr/local/cuda/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+# Aliases
+alias cfiles='find . -maxdepth 1 -type f | wc -l'
+
+# Conda
+export TMPDIR=/media/NAS_R02/USER_PATH/liwei/pip_tmp
+export PIP_CACHE_DIR=/media/NAS_R02/USER_PATH/liwei/pip_cache
+
+# Pip
+export XDG_CACHE_HOME=/media/NAS_R02/USER_PATH/liexport 
+export CONDA_ENVS_PATH=/media/NAS_R02/USER_PATH/liwei/conda/envs
+export CONDA_PKGS_DIRS=/media/NAS_R02/USER_PATH/liwei/conda/pkgswei/pip_cache
