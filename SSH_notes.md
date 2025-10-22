@@ -26,30 +26,29 @@
 ## ⚙️ Terminal Multiplexer (TMUX)
 
 ```bash
-## 开启鼠标支持（滚轮、窗口点击等）
-# 进入命令行模式：Ctrl + b 然后按 ":"
-set -g mouse on
+## 打开鼠标滚轮功能
+ctrl+b，然后按":"，进入命令行模式
+输入set -g mouse on
+设置成鼠标模式，能直接鼠标点窗口切换
 
 ## 新建会话
-tmux new -s <session-name>
+tmux new -s <session-name/number>
 
-## 连接到已有会话
-tmux attach -t <session-name>
+## 接入会话
+tmux attach -t <session-name/number>
 
-## 切换到其他会话
-tmux switch -t <session-name>
+## 切换会话
+tmux switch -t <session-name/number>
 
-## 从当前会话分离（保持后台运行）
+## 分离会话
 tmux detach
 
-## 查看所有会话
+## 列出会话
 tmux ls
-# 或
-tmux list-sessions
+tmux list-session
 
-## 关闭（终止）指定会话
-tmux kill-session -t <session-name>
-
+## 杀死会话
+tmux kill-session -t <session-name/number>
 ```
 
 - **More commmon commmands:** [Common commands](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
