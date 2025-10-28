@@ -49,6 +49,9 @@ tmux list-session
 
 ## 杀死会话
 tmux kill-session -t <session-name/number>
+
+## 清空所有会话且编号重置
+tmux kill-server
 ```
 
 - **More commmon commmands:** [Common commands](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
