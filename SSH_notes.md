@@ -81,5 +81,24 @@ export CONDA_ENVS_PATH=/media/NAS_R02/USER_PATH/liwei/conda/envs
 export CONDA_PKGS_DIRS=/media/NAS_R02/USER_PATH/liwei/conda/pkgswei/pip_cache
 ```
 
+---
+# ⚙️ Linux adduser script
 
+```bash
+#!/bin/bash
+USER=$1
 
+adduser --gecos "" "$USER"
+usermod -s /bin/bash "$USER"
+passwd "$USER"
+usermod -aG ssh "$USER"
+usermod -aG sudo "$USER"
+
+echo ">>> User $USER created successfully with SSH + sudo enabled."
+```
+
+运行：
+
+```bash
+sudo bash create_user.sh liwei2
+```
